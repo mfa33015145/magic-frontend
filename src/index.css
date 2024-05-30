@@ -23,6 +23,7 @@ html,
 body
 {
     overflow: hidden;
+    background-color: black;
 }
 
 .experience
@@ -46,3 +47,4 @@ body
 {
     color: inherit;
 }
+

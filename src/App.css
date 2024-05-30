@@ -43,25 +43,21 @@
   }
 }
 
-.botao{
-  background: black;
-  display:inline-block;
+.button{
+  display: inline-flex;
   padding:10px 20px;
-  background-color:#000;
-  color:#fff;
-  border-radius:30px;
+  background-color: orangered;
+  color:blue;
+  border-radius:50px;
   cursor:pointer;
   transition:transform .3s ease;
   position:end center;
-  text-decoration:none;
-  
+  text-decoration:white;
 }
-.botao:hover{
-  transform:scale(1.1);
-  background-color:grey
+.button:hover{
 
-}
-html,
-body{
-  background-color: black;
+  color:blue;
+  transform:scale(1.1);
+  background-color:white;
+
 }

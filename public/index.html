@@ -27,23 +27,38 @@
     <title>MAGIC FRONTEND</title>
   </head>
   <body>
-    <audio id="somBotao1" src="jump.mp3"></audio>
-    <div class="botao" onclick="abrirPaginaindex()">
-      PORTFOLIO
-   </div>
-   <div class="botao" onclick="abrirPaginaTabs()">
-       PROJECTS
-   </div>
-   <div class="botao" onclick="abrirPaginaPosts()">
-       CONTACTS
-   </div>     
+    <body>
+
+      <nav class="navbar navbar-expand-lg fixed-top custom-nav sticky">
+          <div class="container">
+              <a class='navbar-brand logo' href='index_1.html'>
+                      <h1></h1>
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                      <i class="mdi mdi-menu"></i>
+                  </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ms-auto">
+                    <li class="button">
+                      <a href="/portfolio/contacts.html" class="nav-link">CONTACTS</a>
+                  </li>
+                      <li class="button">
+                          <a href="/portfolio/portfolio.html" class="nav-link">PORTFOLIO</a>
+                      </li>
+                      <li class="button">
+                          <a href="/portfolio/projects.html" class="nav-link">PROJECTS</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
+      You can add web-fonts, meta tags, or analytics to this file.
       The build step will place the bundled scripts into the <body> tag.
 
       To begin the development, run `npm start` or `yarn start`.
