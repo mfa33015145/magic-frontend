@@ -1,30 +1,28 @@
-body {
-  background-color: #d8d8d8;
-  background-image: url(../images/logo\ \(1\).gif);
-  background-size: cover;
-  background-position: center;
+html
+body{
+    background-image: url(logo.gif);
+    background-color:black;
+    background-size:cover;
+    background-position: cover;
 }
-
 .button{
-  display: flex;
-  display:inline-flex;
+    display:inline-flex;
     padding:10px 20px;
-    background-color:white;
-    color: black;
+    background-color: none;
+    color:#fff;
     border-radius:30px;
     cursor:pointer;
     transition:transform .3s ease;
     position:center;
-    text-decoration: none;
-    width: 120px;
-    text-align: center;
+    text-decoration:none;
 }
-  .button:hover{
-      transform:scale(1.1);
-      background-color: red;
-  }
-  
-  .frame{
+.button:hover{
+    transform:scale(1.1);
+    background-color:red;
+
+}
+
+.frame{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -65,4 +63,34 @@ body {
       inset -4px -4px 6px 0 rgba(0, 0, 0, 1),
       inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
   }
-  
+     
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-child {
+        display: none;
+        padding:10px 20px;
+        background-color:white;
+        color:white;
+        border-radius:20px;
+        cursor:pointer;
+        transition:transform .3s ease;
+        position:center;
+        text-decoration:none;
+    }
+    .dropdown-child a {
+        padding:10px 20px;
+        background-color: black;
+        color:white;
+        border-radius:30px;
+        cursor:pointer;
+        transition:transform .3s ease;
+        position:center;
+        text-decoration:none;
+        display: block;
+    }
+    .dropdown:hover .dropdown-child {
+        display: block;
+    }
+    
