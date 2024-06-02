@@ -257,8 +257,6 @@ h1{
   transition-delay: 1640ms;
 }
 
-
-
 .logo {
   position: absolute;
   top: 60px;
@@ -298,14 +296,27 @@ h1{
     font-size: 8vh;
   }
 }
+.hd {
+  margin: 50px auto;
+  width: 500px;
+  height: 180px;
+  text-align: center;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  -webkit-text-stroke: 5px #eee;
+  color: #eee;
+  font-size: 80px;
+  font-style: italic;
+  letter-spacing: -5px;
+  transition: color 1s;
+}
 
-
-
-
-
-
-
-
-
-
-
+.info {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  font-size: 13px;
+  color: #ccc;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+}
