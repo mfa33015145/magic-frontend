@@ -1,10 +1,12 @@
 html
 body{
-    background-image: url(logo.gif);
+    background-image: url(background-test.gif);
     background-color:black;
     background-size:cover;
     background-position: cover;
-}
+    margin: 0;
+   
+    }
 .button{
     display:inline-flex;
     padding:10px 20px;
@@ -21,76 +23,88 @@ body{
     background-color:red;
 
 }
-
-.frame{
+ul
+{
+    position: center;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     align-items: center;
-    height: 80px;
-    width: 420px;
-    position: relative;
-    margin: 10px auto;
-    box-shadow:inset 2px 2px 2px 0px rgba(42,57,68,.5),
-      inset -7px -7px 10px 0px rgba(0,0,0,.1),
-     7px 7px 20px 0px rgba(0,0,0,1),
-     4px 4px 5px 0px rgba(0,0,0,1);
-   transition: 0.6s cubic-bezier(.79,.21,.06,.81);
-     border-radius: 10px;
-     color:blue
-  }
-  
-  .btn{
-    height: 40px;
-    width: 40px;
-    border-radius: 3px;
-    box-shadow:inset 2px 2px 2px 0px rgba(42,57,68,.5),
-      inset -7px -7px 10px 0px rgba(0,0,0,.1),
-     7px 7px 20px 0px rgba(0,0,0,1),
-     4px 4px 5px 0px rgba(0,0,0,1);
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
     justify-content: center;
+
+}
+ul li
+{
+    position: relative;
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    margin: 0 30px;
+    transform: rotate(-30deg) skew(25deg);
+    background: #ccc;
+
+}
+ul li span
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transition: 0.5s;
+    display: flex !important;
     align-items: center;
-   transition: 0.6s cubic-bezier(.79,.21,.06,.81);
-    color: blue;
-    font-size: 20px;
-    text-decoration: none;
-  }
-  .btn:active{
-    box-shadow:  4px 4px 6px 0 rgba(42,57,68,.4),
-                -4px -4px 6px 0 rgba(0, 0, 0, 1), 
-      inset -4px -4px 6px 0 rgba(0, 0, 0, 1),
-      inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
-  }
-     
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-    .dropdown-child {
-        display: none;
-        padding:10px 20px;
-        background-color:white;
-        color:white;
-        border-radius:20px;
-        cursor:pointer;
-        transition:transform .3s ease;
-        position:center;
-        text-decoration:none;
-    }
-    .dropdown-child a {
-        padding:10px 20px;
-        background-color: black;
-        color:white;
-        border-radius:30px;
-        cursor:pointer;
-        transition:transform .3s ease;
-        position:center;
-        text-decoration:none;
-        display: block;
-    }
-    .dropdown:hover .dropdown-child {
-        display: block;
-    }
-    
+    justify-content: center;
+    color: #fff;
+    font-size: 30px !important;
+}
+
+ul li:hover span:nth-child(5)
+{
+    transform: translate(40px,-40px);
+    opacity: 1;
+}
+ul li:hover span:nth-child(4)
+{
+    transform: translate(30px,-30px);
+    opacity: .8;
+}
+ul li:hover span:nth-child(3)
+{
+    transform: translate(20px,-20px);
+    opacity: .6;
+}
+ul li:hover span:nth-child(2)
+{
+    transform: translate(10px,-10px);
+    opacity: .4;
+}
+ul li:hover span:nth-child(1)
+{
+    transform: translate(0,0);
+    opacity: .2;
+}
+
+ul li:nth-child(1) span
+{
+    background: rgb(0, 120, 124);
+    ;
+}
+ul li:nth-child(2) span
+{   background: rgb(17, 60, 201);
+   
+}
+ul li:nth-child(3) span
+{
+    background: rgb(56, 59, 68);
+}
+ul li:nth-child(4) span
+{
+    background: black;
+}
+ul li:nth-child(5) span
+{
+    background: rgb(103, 137, 247);
+}
