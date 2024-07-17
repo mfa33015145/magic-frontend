@@ -1,64 +1,18 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-  color:white
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: none;
-    position:end;
-  }
-}
-
-.App-header {
-  background-color: none;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  -moz-osx-font-smoothing: grayscale;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.App-link {
-  color: none;
-  position: center;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-html
-body{
+body {
   background-color: black;
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-color: none;
   font-family: Arial, sans-serif;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(logo.gif);
- }
+}
 
- .button{
+
+
+.botao{
   display:inline-flex;
   padding:10px 20px;
   background-color: none;
@@ -69,79 +23,70 @@ body{
   position:center;
   text-decoration:none;
 }
-.button:hover{
+.botao:hover{
   transform:scale(1.1);
   background-color:red;
 }
-/* Estilos básicos da barra de navegação */
-.navbar {
+
+.Iam {
+  padding: 2em 5em;
+  font: normal 40px/50px Montserrat, sans-serif;
+  color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-end; /* Alinha os itens à direita */
-  padding: 0.5rem 1rem;
-  background-color: black; /* Fundo cinza */
-  color: #ffffff; /* Texto branco */
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: auto; /* Ajusta a largura automaticamente */
+  text-align: center; /* Alinha o texto dentro do container */
 }
 
-.navbar-collapse {
-  display: flex;
-  align-items: center;
+.Iam p {
+  margin: 0;
 }
 
-.navbar-nav {
-  list-style-type: none;
-  padding-left: 0;
-  margin-bottom: 0;
-  display: flex;
-}
-
-.nav-item {
-  margin: 0.5rem;
+.Iam b {
   position: relative;
-}
-
-.nav-link {
-  color: #ffffff; /* Texto branco */
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  color: #007bff;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: black; /* Fundo cinza */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-
-.dropdown-item {
-  display: block;
-  padding: 0.25rem 1.5rem;
-  color: #ffffff; /* Texto branco */
-  text-decoration: none;
-}
-
-.dropdown-item:hover {
-  background-color: blue;
-}
-
-.dropdown-divider {
-  height: 1px;
-  margin: 0.5rem 0;
   overflow: hidden;
-  background-color: #e9ecef;
+  height: 50px;
+  top: 10px;
 }
 
-/* Estilo para dropdowns abertos */
-.nav-item.dropdown.open .dropdown-menu {
-  display: block;
+.innerIam {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+  animation: move 5s infinite;
+}
+
+@keyframes move {
+  0% { top: 0px; }
+  20% { top: -50px; }
+  40% { top: -100px; }
+  60% { top: -150px; }
+  80% { top: -200px; }
+}
+
+/* Vendor-prefixed keyframes for compatibility */
+@-webkit-keyframes move {
+  0% { top: 0px; }
+  20% { top: -50px; }
+  40% { top: -100px; }
+  60% { top: -150px; }
+  80% { top: -200px; }
+}
+
+@-moz-keyframes move {
+  0% { top: 0px; }
+  20% { top: -50px; }
+  40% { top: -100px; }
+  60% { top: -150px; }
+  80% { top: -200px; }
+}
+
+@-o-keyframes move {
+  0% { top: 0px; }
+  20% { top: -50px; }
+  40% { top: -100px; }
+  60% { top: -150px; }
+  80% { top: -200px; }
 }

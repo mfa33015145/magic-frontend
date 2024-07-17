@@ -1,24 +1,35 @@
+import React from 'react';
 import logo from './logo1.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          
-          
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-         
-        </a>
-      </header>
+     
+        <div className="botao-container">
+          <div className="botao">
+            <a href="contacts.html" target="_blank" className="nav-link">CONTACTS</a>
+          </div>
+          <div className="botao">
+            <a href="portfolio.html" target="_blank" className="nav-link">PORTFOLIO</a>
+          </div>
+          <div className="botao">
+            <a href="projects.html" target="_blank" className="nav-link">PROJECTS</a>
+          </div>
+        </div>
+        <div className="Iam">
+          <p>WELCOME TO</p>
+          <b>
+            <div className="innerIam">
+              <div>MAGIC-FRONT-END</div>
+              <div>YOUR USER EXPERIENCE</div>
+              <div>TREATMENT WITH EQUALITY</div>
+              <div>WHOEVER YOU ARE</div>
+              <div>AND WHATEVER YOUR STYLE IS</div>
+            </div>
+          </b>
+        </div>
+      
     </div>
   );
 }
