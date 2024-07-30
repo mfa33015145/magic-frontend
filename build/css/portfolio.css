@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Grotesk:400,700&display=swap');
+
+:root {
+  --m: 1.3rem;
+  --purple: black;
+  --green: darkblue;
+  --blue: blue;
+  --red: red;
+  --orange:orangered;
+  --pink: #edf4f5;
+  --yellow: white;
+}
+
+body {
+  background-image: url(images/galaxia.gif);
+  background-color: #141516;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.button {
+    margin: 0 15px;
+    border: calc(0.08 * var(--m)) solid transparent;
+    position: relative;
+    color: #F3F3F3;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: var(--m);
+    border-radius: calc(0.7 * var(--m));
+    padding: 10px 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    background: linear-gradient(#121213, #121213), 
+                linear-gradient(#121213 50%, rgba(18, 18, 19, 0.6) 80%, rgba(18, 18, 19, 0)), 
+                linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+    background-origin: border-box;
+    background-clip: padding-box, border-box, border-box;
+    background-size: 200%;
+    animation: animate 2s infinite linear;
+    transition: transform 0.3s ease, background 0.3s ease; /* Adiciona transições suaves */
+  }
+  
+  .button::before {
+    content: '';
+    background: linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+    height: 30%;
+    width: 60%;
+    position: absolute;
+    bottom: -20%;
+    z-index: -5;
+    background-size: 200%;
+    animation: animate 2s infinite linear;
+    filter: blur(calc(0.8 * var(--m)));
+    transition: background 0.3s ease; /* Adiciona transições suaves ao ::before */
+  }
+  
+  .button:hover {
+    transform: scale(1.2);
+  }
+  
+  .button:hover::before {
+    animation: animate 0.5s infinite linear; /* Animação em ::before durante o hover */
+    transform: scale(1.2); /* Adiciona escala ao ::before durante o hover */
+  }
+  
+
+@keyframes animate {
+  0% { background-position: 0; }
+  100% { background-position: 200%; }
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --m: 2rem;
+  }
+}
+#container {
+    color: white;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: bold;
+    padding-top: 200px;  
+    position: fixed;
+    width: 100%;
+    bottom: 45%;
+    display: flex;
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    align-items: center; /* Centraliza o texto verticalmente */
+    background-color: transparent; /* Cor de fundo */
+    text-align: center; /* Centraliza o texto horizontalmente */
+  }
+  
+  #flip {
+    height: 50px;
+    overflow: hidden;
+  }
+  
+  #flip > div > div {
+    color: #fff;
+    padding: 4px 12px;
+    height: 45px;
+    margin-bottom: 45px;
+    display: inline-block;
+  }
+  
+  #flip div:first-child {
+    animation: show 5s linear infinite;
+  }
+  
+  #flip div div {
+    background: none;
+  }
+  
+  #flip div:first-child div {
+    background: none;
+  }
+  
+  #flip div:last-child div {
+    background:none; /* Ajustado para corresponder à cor de fundo */
+  }
+  
+  @keyframes show {
+    0% {margin-top: -270px;}
+    5% {margin-top: -180px;}
+    33% {margin-top: -180px;}
+    38% {margin-top: -90px;}
+    66% {margin-top: -90px;}
+    71% {margin-top: 0px;}
+    99.99% {margin-top: 0px;}
+    100% {margin-top: -270px;}
+  }
+  
+  p {
+    position: fixed;
+    width: 100%;
+    bottom: 30px;
+    font-size: 12px;
+    color: #999;
+    margin-top: 200px;
+  }
+  

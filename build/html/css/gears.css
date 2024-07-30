@@ -1,0 +1,107 @@
+html {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: #111;
+  }
+  
+  #machine {
+    width: 300px;
+    aspect-ratio: 1/1;
+  /*   outline: 1px solid black;   */
+  }
+  
+  .gear {
+    width: 100px;
+    aspect-ratio: 1/1;
+  /*   border-radius: 50%; */
+    background: 
+      radial-gradient(circle at 5% 5%, transparent 20px, gray 21px, transparent 30px),
+      radial-gradient(circle at 50% -10px, transparent 20px, gray 21px, transparent 30px),
+      radial-gradient(circle at 95% 5%, transparent 20px, gray 21px, transparent 30px),
+      radial-gradient(circle at 110px 50%, transparent 20px, gray 21px, transparent 30px),
+      radial-gradient(circle at 95% 95%, transparent 20px, gray 21px, transparent 30px),
+      radial-gradient(circle at 50% 110px, transparent 20px, gray 21px, transparent 30px),
+      radial-gradient(circle at 5% 95%, transparent 20px, gray 21px, transparent 30px),
+      radial-gradient(circle at -10px 50%, transparent 20px, gray 21px, transparent 30px),
+      radial-gradient(circle at 50% 50%, transparent 25px, gray 26px, transparent 50px);
+  }
+  
+  .gear:nth-child(1) {
+    transform: scale(.75) translate(45%, 45%) rotate(22.5deg);
+    animation: roll1 3s linear infinite;
+  }
+  @keyframes roll1 {
+    100% {
+      transform: scale(.75) translate(45%, 45%) rotate(-341.5deg);
+    }
+  }
+  
+  .gear:nth-child(2) {
+    transform: translateX(100%);
+    animation: roll2 3s linear infinite;
+  }
+  @keyframes roll2 {
+    100% {
+      transform: translateX(100%) rotate(359deg);
+    }
+  }
+  
+  .gear:nth-child(3) {
+    transform: scale(.75) translate(180%,-20%) rotate(22.5deg);
+    animation: roll3 3s linear infinite;
+  }
+  @keyframes roll3 {
+    100% {
+      transform: scale(.75) translate(180%,-20%) rotate(-341.5deg);
+    }
+  }
+  
+  
+  .gear-2 {
+    width: 100px;
+    aspect-ratio: 1/1;
+  /*   border-radius: 50%; */
+    background: 
+      radial-gradient(circle at 5% 5%, transparent 20px, red 21px, transparent 30px),
+      radial-gradient(circle at 50% -10px, transparent 20px, red 21px, transparent 30px),
+      radial-gradient(circle at 95% 5%, transparent 20px, red 21px, transparent 30px),
+      radial-gradient(circle at 110px 50%, transparent 20px, red 21px, transparent 30px),
+      radial-gradient(circle at 95% 95%, transparent 20px, red 21px, transparent 30px),
+      radial-gradient(circle at 50% 110px, transparent 20px, red 21px, transparent 30px),
+      radial-gradient(circle at 5% 95%, transparent 20px, red 21px, transparent 30px),
+      radial-gradient(circle at -10px 50%, transparent 20px, red 21px, transparent 30px),
+      radial-gradient(circle at 50% 50%, transparent 25px, red 26px, transparent 50px);
+  }
+  
+  .gear-2:nth-child(1) {
+    transform: scale(.75) translate(45%, 45%) rotate(22.5deg);
+    animation: roll1 3s linear infinite;
+  }
+  @keyframes roll1 {
+    100% {
+      transform: scale(.75) translate(45%, 45%) rotate(-341.5deg);
+    }
+  }
+  
+  .gear-2:nth-child(2) {
+    transform: translateX(100%);
+    animation: roll2 3s linear infinite;
+  }
+  @keyframes roll2 {
+    100% {
+      transform: translateX(100%) rotate(359deg);
+    }
+  }
+  
+  .gear-2:nth-child(3) {
+    transform: scale(.75) translate(180%,-20%) rotate(22.5deg);
+    animation: roll3 3s linear infinite;
+  }
+  @keyframes roll3 {
+    100% {
+      transform: scale(.75) translate(180%,-20%) rotate(-341.5deg);
+    }
+  }
+  
+  
