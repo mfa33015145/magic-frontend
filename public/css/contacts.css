@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Grotesk:400,700&display=swap');
+
+:root {
+  --m: 1.3rem;
+  --purple: black;
+  --green: grey;
+  --blue: #edf4f5;
+  --red: white;
+  --orange:#DBA800;
+  --pink: #FFC300;
+  --yellow: #FFEE55;
+}
+
+body {
+  background-image: url(images/background-test.gif);
+  background-color: #141516;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.button {
+    margin: 0 15px;
+    border: calc(0.08 * var(--m)) solid transparent;
+    position: relative;
+    color: #F3F3F3;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: var(--m);
+    border-radius: calc(0.7 * var(--m));
+    padding: 10px 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    background: linear-gradient(#121213, #121213), 
+                linear-gradient(#121213 50%, rgba(18, 18, 19, 0.6) 80%, rgba(18, 18, 19, 0)), 
+                linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+    background-origin: border-box;
+    background-clip: padding-box, border-box, border-box;
+    background-size: 200%;
+    animation: animate 2s infinite linear;
+    transition: transform 0.3s ease, background 0.3s ease; /* Adiciona transições suaves */
+  }
+  
+  .button::before {
+    content: '';
+    background: linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+    height: 30%;
+    width: 60%;
+    position: absolute;
+    bottom: -20%;
+    z-index: -5;
+    background-size: 200%;
+    animation: animate 2s infinite linear;
+    filter: blur(calc(0.8 * var(--m)));
+    transition: background 0.3s ease; /* Adiciona transições suaves ao ::before */
+  }
+  
+  .button:hover {
+    transform: scale(1.2);
+  }
+  
+  .button:hover::before {
+    animation: animate 0.5s infinite linear; /* Animação em ::before durante o hover */
+    transform: scale(1.2); /* Adiciona escala ao ::before durante o hover */
+  }
+  
+
+@keyframes animate {
+  0% { background-position: 0; }
+  100% { background-position: 200%; }
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --m: 2rem;
+  }
+}
+ul
+{
+    position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+
+}
+ul li
+{
+    position: relative;
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    margin: 0 30px;
+    transform: rotate(-30deg) skew(25deg);
+    background: #ccc;
+
+}
+ul li span
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transition: 0.5s;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 30px !important;
+}
+
+ul li:hover span:nth-child(5)
+{
+    transform: translate(40px,-40px);
+    opacity: 1;
+}
+ul li:hover span:nth-child(4)
+{
+    transform: translate(30px,-30px);
+    opacity: .8;
+}
+ul li:hover span:nth-child(3)
+{
+    transform: translate(20px,-20px);
+    opacity: .6;
+}
+ul li:hover span:nth-child(2)
+{
+    transform: translate(10px,-10px);
+    opacity: .4;
+}
+ul li:hover span:nth-child(1)
+{
+    transform: translate(0,0);
+    opacity: .2;
+}
+
+ul li:nth-child(1) span
+{
+    background: rgb(0, 120, 124);
+    ;
+}
+ul li:nth-child(2) span
+{   background: rgb(17, 60, 201);
+   
+}
+ul li:nth-child(3) span
+{
+    background: rgb(56, 59, 68);
+}
+ul li:nth-child(4) span
+{
+    background: black;
+}
+ul li:nth-child(5) span
+{
+    background: rgb(103, 137, 247);
+}
