@@ -1,4 +1,4 @@
 [build]
 base = "."
-command = "npm run build" "npm install splitting"
+command = "npm install && npm install splitting && npm run build"
 publish = "./build"
